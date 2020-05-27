@@ -62,7 +62,7 @@ class App extends Component {
     //   }
     // };
 
-    let btnClass = [classes.button];
+    let btnClass = '';
 
     let persons = null;
 
@@ -80,16 +80,7 @@ class App extends Component {
         </div>
       );
 
-      btnClass.push(classes.red);
-      
-
-
-
-      // style.backgroundColor = 'red';
-      // style[':hover'] = {
-      //   backgroundColor: 'salmon',
-      //   color: 'black'
-      // }
+      btnClass = classes.red;
 
     }
 
@@ -107,7 +98,7 @@ class App extends Component {
       <div className={classes.App}>
         <h1>Hi I'm a react app</h1>
         <p className={assignedclasses.join(' ')}>This is really working</p>
-        <button className={btnClass.join(' ')} onClick={this.togglePersonsHandler}>
+        <button className={btnClass} onClick={this.togglePersonsHandler}>
           Toggle Person
         </button>
         {persons}
